@@ -1,0 +1,10 @@
+
+To create the image run ~docker build --tag vi-fileserver~ from within this directory.
+
+To run the image, run ~docker run --mount src=$HOME,target=/host,type=bind vi-fileserver~.
+
+Alternatively, simply run the ~run.sh~ script included within here to do both the build + run automatically.
+It may take a while to download the Python image from dockerhub if you haven't already.
+
+It should print out something like ~Running on http://172.17.0.3:5000~. Go to ~http://172.17.0.3:5000/get/<filepath>~ and it should return the text of that file (as long as the path exists on your filesystem).
+For instance http://172.17.0.3:5000/get/hello.txt to access  =~/hello.txt=

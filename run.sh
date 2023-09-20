@@ -1,2 +1,3 @@
 #!/usr/bin/env sh
-docker run --mount src="/home/vivien",target="/host",type=bind  48506523ab7b
+docker build --tag vi-fileserver
+docker run --mount src=$HOME,target=/host,type=bind vi-fileserver
