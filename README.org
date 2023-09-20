@@ -8,3 +8,5 @@ It may take a while to download the Python image from dockerhub if you haven't a
 
 It should print out something like ~Running on http://172.17.0.3:5000~. Go to ~http://172.17.0.3:5000/get/<filepath>~ and it should return the text of that file (as long as the path exists on your filesystem).
 For instance http://172.17.0.3:5000/get/hello.txt to access  =~/hello.txt=
+
+In principle it should also work out-of-the-box with Podman, I just haven't tested that yet because Podman doesn't like my laptop.
